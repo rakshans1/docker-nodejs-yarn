@@ -1,0 +1,9 @@
+
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t rakshans1/nodejs-yarn .
+  - docker run rakshans1/nodejs-yarn /bin/sh -c "node -v && npm -v && yarn -version"
